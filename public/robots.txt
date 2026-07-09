@@ -1,0 +1,6 @@
+# public/robots.txt
+User-agent: *
+Disallow: /?_g=
+Allow: /
+
+Sitemap: https://www.bossdentglobal.com/sitemap.xml
