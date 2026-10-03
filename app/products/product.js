@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import { ArrowRight, Filter, Search } from "lucide-react";
 import "../globals.css";
+import { additionalProducts } from "@/data/additional-products";
 
 export default function ProductsPage() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -374,7 +375,7 @@ export default function ProductsPage() {
         shortDesc:
           "3.25% sodium hypochlorite solution for effective irrigation and canal disinfection.",
         price: "Contact for Price",
-        image: "/images/products/safe-endo/HYPOCHLOR 3.25%.jpg",
+        image: "/images/products/safe-endo/HYPOCHLOR-3.25.jpg",
         features: [
           "3.25% Sodium Hypochlorite",
           "Root Canal Irrigant",
@@ -390,7 +391,7 @@ export default function ProductsPage() {
         shortDesc:
           "5.25% sodium hypochlorite solution providing enhanced irrigation and canal debridement.",
         price: "Contact for Price",
-        image: "/images/products/safe-endo/HYPOCHLOR FORTE 5.25%.jpg",
+        image: "/images/products/safe-endo/HYPOCHLOR-FORTE-5.25.jpg",
         features: [
           "5.25% Sodium Hypochlorite",
           "High Strength Irrigant",
@@ -756,11 +757,20 @@ export default function ProductsPage() {
   };
 
   // ── Flatten products + attach category ──
-  const flatProducts = useMemo(() => {
-    return Object.entries(allProducts).flatMap(([category, products]) =>
-      products.map((product) => ({ ...product, category })),
-    );
-  }, []);
+const flatProducts = useMemo(() => {
+  const mergedProducts = { ...allProducts };
+
+  Object.entries(additionalProducts).forEach(([category, products]) => {
+    mergedProducts[category] = [...(mergedProducts[category] || []), ...products];
+  });
+
+  return Object.entries(mergedProducts).flatMap(([category, products]) =>
+    products.map((product) => ({
+      ...product,
+      category,
+    })),
+  );
+}, []);
 
   // ── Categories with counts ──
   const categories = useMemo(() => {
@@ -769,6 +779,7 @@ export default function ProductsPage() {
       { id: "endodontic-files", name: "Endodontic Files" },
       { id: "handpieces", name: "Handpieces" },
       { id: "dental-materials", name: "Dental Materials" },
+      { id: "burs", name: "Burs" },
       { id: "maintenance", name: "Maintenance" },
       { id: "accessories", name: "Accessories" },
       { id: "magnification", name: "Magnification" },

@@ -13,6 +13,79 @@ import {
   Info,
 } from "lucide-react";
 import ProductDetailClient from "./ProductDetailClient";
+import { additionalProducts } from "@/data/additional-products";
+
+// ─────────────────────────────────────────────────────────────
+// Convert products from additional-products.js into the
+// structure expected by ProductDetailClient.
+// ─────────────────────────────────────────────────────────────
+
+const getAdditionalProductBySlug = (slug) => {
+  for (const [categorySlug, products] of Object.entries(additionalProducts)) {
+    const product = products.find((item) => item.slug === slug);
+
+    if (!product) continue;
+
+    const categoryNames = {
+      "endodontic-files": "Endodontic Files",
+      handpieces: "Handpieces",
+      "dental-materials": "Dental Materials",
+      burs: "Burs",
+      maintenance: "Maintenance Products",
+      accessories: "Accessories",
+      magnification: "Magnification Equipment",
+      equipment: "Dental Equipment",
+    };
+
+    return {
+      id: product.id,
+
+      name: product.name,
+
+      brand: product.brand,
+
+      // IMPORTANT:
+      // This is the CATEGORY slug, not the product URL slug.
+      // ProductDetailClient uses product.slug for the category breadcrumb.
+      slug: categorySlug,
+
+      category: categoryNames[categorySlug] || "Products",
+
+      subtitle: product.shortDesc,
+
+      fullDescription: `${product.name} by ${product.brand} is a professional dental product supplied for clinical dental applications. The product is presented according to the information available in the supplied product catalog. Please contact us for product availability, specifications, pack configuration and pricing.`,
+
+      price: product.price || "Contact for Price",
+
+      images: product.images?.length > 0 ? product.images : [product.image],
+
+      features: product.features || [],
+
+      specifications: {
+        Brand: product.brand || "Not specified",
+        Product: product.name,
+        Category: categoryNames[categorySlug] || "Products",
+        Availability: "Contact for availability",
+        Pricing: product.price || "Contact for Price",
+      },
+
+      usageInstructions: [
+        "Review the product information before use.",
+        "Follow the manufacturer's instructions and recommended clinical protocol.",
+        "Use the product only for its intended dental application.",
+        "Store and handle the product according to the manufacturer's recommendations.",
+        "Contact us for detailed specifications, pack configuration and availability.",
+      ],
+
+      variants: undefined,
+
+      relatedProducts: [],
+    };
+  }
+
+  return null;
+};
+
 
 // This would come from your database/API in production
 export const getProductBySlug = (slug) => {
@@ -1774,7 +1847,15 @@ export const getProductBySlug = (slug) => {
     },
   };
 
-  return products[slug] || null;
+  const existingProduct = products[slug];
+
+  if (existingProduct) {
+    return existingProduct;
+  }
+
+  // If it is not an existing product, check the new products
+  // from data/additional-products.js.
+  return getAdditionalProductBySlug(slug);
 };
 
 export default function ProductDetailPage({ params }) {
