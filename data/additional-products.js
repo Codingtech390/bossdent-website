@@ -1,7 +1,7 @@
 // Additional products extracted from the supplied brand catalogs.
-// Product names and visual/source details are based on the uploaded files.
-// Descriptions/features below are conservative website presentation copy.
-// Do not treat them as technical specifications unless separately verified.
+// Product names and visual/source details are based on the supplied images.
+// Descriptions/features are website presentation copy and should be verified
+// before being treated as manufacturer technical specifications.
 
 export const additionalProducts = {
   "endodontic-files": [
@@ -26,7 +26,6 @@ export const additionalProducts = {
         "Inactive tip design",
       ],
     },
-
     {
       id: 68,
       brand: "DENTSPLY",
@@ -35,6 +34,7 @@ export const additionalProducts = {
       shortDesc: "Hand-operated ProTaper file system for root canal shaping and finishing.",
       price: "Contact for Price",
       image: "/images/products/dentsply/hand-protaper.jpg",
+      images: ["/images/products/dentsply/hand-protaper.jpg"],
       features: [
         "For hand use",
         "Shaping and finishing file sequence",
@@ -42,13 +42,12 @@ export const additionalProducts = {
         "Endodontic instrumentation",
       ],
     },
-
     {
       id: 69,
       brand: "DENTSPLY",
       name: "ProTaper Gold Assorted — 21/25 mm",
       slug: "protaper-gold-assorted-21-25-mm",
-      shortDesc: "Assorted ProTaper Gold endodontic files supplied in 21/25 mm working length.",
+      shortDesc: "Assorted ProTaper Gold endodontic files supplied in 21/25 mm working lengths.",
       price: "Contact for Price",
       image: "/images/products/dentsply/protaper-gold-assorted-21-25-mm.jpg",
       images: [
@@ -56,13 +55,12 @@ export const additionalProducts = {
         "/images/products/dentsply/protaper-gold-assorted-21-25-mm-1.jpg",
       ],
       features: [
-        "21/25 mm working length",
+        "21/25 mm working lengths",
         "Shaping and finishing files",
         "Colour-coded files",
         "Endodontic root canal shaping",
       ],
     },
-
     {
       id: 70,
       brand: "MANI",
@@ -82,7 +80,6 @@ export const additionalProducts = {
         "Endodontic instrumentation",
       ],
     },
-
     {
       id: 71,
       brand: "MANI",
@@ -102,7 +99,6 @@ export const additionalProducts = {
         "Endodontic instrumentation",
       ],
     },
-
     {
       id: 72,
       brand: "MANI",
@@ -123,7 +119,6 @@ export const additionalProducts = {
         "Root canal preparation",
       ],
     },
-
     {
       id: 73,
       brand: "MANI",
@@ -143,7 +138,6 @@ export const additionalProducts = {
         "Endodontic instrumentation",
       ],
     },
-
     {
       id: 74,
       brand: "MANI",
@@ -163,7 +157,6 @@ export const additionalProducts = {
         "Stainless steel construction",
       ],
     },
-
     {
       id: 75,
       brand: "MANI",
@@ -185,7 +178,6 @@ export const additionalProducts = {
         "Endodontic instrumentation",
       ],
     },
-
     {
       id: 76,
       brand: "MANI",
@@ -203,6 +195,26 @@ export const additionalProducts = {
         "ISO sizes 15–40 shown",
         "Colour-coded handles",
         "Stainless steel construction",
+      ],
+    },
+
+    // E-Curve Gold
+    {
+      id: 96,
+      brand: "E-Curve Gold",
+      name: "E-Curve Gold Hand ProTaper",
+      slug: "e-curve-gold-hand-protaper",
+      shortDesc:
+        "Gold heat-activated hand ProTaper files with ISO colour-coded handles and apical taper and flute design.",
+      price: "Contact for Price",
+      image: "/images/products/e-curve-gold/e-curve-hand-pro-taper.jpeg",
+      images: ["/images/products/e-curve-gold/e-curve-hand-pro-taper.jpeg"],
+      features: [
+        "Gold heat activated",
+        "Controlled memory NiTi files",
+        "ISO colour-coded handles",
+        "Assorted SX–F3 set shown",
+        "21/25 mm options shown",
       ],
     },
   ],
@@ -223,7 +235,6 @@ export const additionalProducts = {
       ],
       features: ["2% taper", "4% taper", "6% taper", "ISO colour-coded options"],
     },
-
     {
       id: 78,
       brand: "3M",
@@ -245,7 +256,6 @@ export const additionalProducts = {
         "3M ESPE product",
       ],
     },
-
     {
       id: 79,
       brand: "3M",
@@ -265,7 +275,6 @@ export const additionalProducts = {
         "3M ESPE product",
       ],
     },
-
     {
       id: 80,
       brand: "3M",
@@ -286,7 +295,6 @@ export const additionalProducts = {
         "3M ESPE product",
       ],
     },
-
     {
       id: 81,
       brand: "3M",
@@ -306,7 +314,6 @@ export const additionalProducts = {
         "3M ESPE product",
       ],
     },
-
     {
       id: 82,
       brand: "3M",
@@ -323,7 +330,6 @@ export const additionalProducts = {
       ],
       features: ["Luting cement", "Dental cement", "Syringe presentation", "3M ESPE product"],
     },
-
     {
       id: 83,
       brand: "3M",
@@ -344,7 +350,6 @@ export const additionalProducts = {
         "3M ESPE product",
       ],
     },
-
     {
       id: 84,
       brand: "SHOFU",
@@ -365,7 +370,6 @@ export const additionalProducts = {
         "Clinical dental cement",
       ],
     },
-
     {
       id: 85,
       brand: "SHOFU",
@@ -379,7 +383,6 @@ export const additionalProducts = {
         "/images/products/shofu/hy-bond-polycarboxylate-cement-1.jpg",
         "/images/products/shofu/hy-bond-polycarboxylate-cement-2.jpg",
       ],
-
       features: [
         "Polycarboxylate cement",
         "Powder and liquid system",
@@ -387,7 +390,6 @@ export const additionalProducts = {
         "Mixing accessories shown",
       ],
     },
-
     {
       id: 86,
       brand: "SHOFU",
@@ -407,7 +409,6 @@ export const additionalProducts = {
         "Shofu product",
       ],
     },
-
     {
       id: 87,
       brand: "SHOFU",
@@ -416,7 +417,6 @@ export const additionalProducts = {
       shortDesc: "Composite finishing kit containing rotary finishing instruments and holder.",
       price: "Contact for Price",
       image: "/images/products/shofu/composite-finishing-kit.jpg",
-
       images: [
         "/images/products/shofu/composite-finishing-kit.jpg",
         "/images/products/shofu/composite-finishing-kit-1.jpg",
@@ -428,7 +428,6 @@ export const additionalProducts = {
         "Dental finishing procedure",
       ],
     },
-
     {
       id: 88,
       brand: "SHOFU",
@@ -437,7 +436,6 @@ export const additionalProducts = {
       shortDesc: "Composite polishing kit for finishing and polishing composite restorations.",
       price: "Contact for Price",
       image: "/images/products/shofu/composite-polishing-kit.jpg",
-
       images: [
         "/images/products/shofu/composite-polishing-kit.jpg",
         "/images/products/shofu/composite-polishing-kit-1.jpg",
@@ -449,7 +447,6 @@ export const additionalProducts = {
         "Dental polishing procedure",
       ],
     },
-
     {
       id: 89,
       brand: "SHOFU",
@@ -469,7 +466,6 @@ export const additionalProducts = {
         "Shofu product",
       ],
     },
-
     {
       id: 90,
       brand: "SHOFU",
@@ -490,7 +486,6 @@ export const additionalProducts = {
         "Direct restorative procedure",
       ],
     },
-
     {
       id: 91,
       brand: "SHOFU",
@@ -510,7 +505,6 @@ export const additionalProducts = {
         "Shofu product",
       ],
     },
-
     {
       id: 92,
       brand: "IVOCLAR",
@@ -520,7 +514,6 @@ export const additionalProducts = {
       price: "Contact for Price",
       image: "/images/products/ivoclar/te-econom-plus-intro-kit.jpg",
       images: ["/images/products/ivoclar/te-econom-plus-intro-kit.jpg"],
-
       features: [
         "Universal composite",
         "Introductory kit",
@@ -528,7 +521,6 @@ export const additionalProducts = {
         "Direct restorative material",
       ],
     },
-
     {
       id: 93,
       brand: "IVOCLAR",
@@ -550,7 +542,6 @@ export const additionalProducts = {
         "Anterior and posterior restorative use",
       ],
     },
-
     {
       id: 94,
       brand: "IVOCLAR",
@@ -570,6 +561,181 @@ export const additionalProducts = {
         "Ivoclar product",
       ],
     },
+
+    // EAS ENDO
+    {
+      id: 97,
+      brand: "EAS ENDO",
+      name: "Heal X",
+      slug: "heal-x",
+      shortDesc: "Dry socket healing paste supplied in a 15 g package.",
+      price: "Contact for Price",
+      image: "/images/products/eas-endo/heal-x.jpeg",
+      images: ["/images/products/eas-endo/heal-x.jpeg"],
+      features: ["Dry socket healing paste", "15 g package", "EAS ENDO product"],
+    },
+    {
+      id: 98,
+      brand: "EAS ENDO",
+      name: "CalEase LC",
+      slug: "calease-lc",
+      shortDesc: "Light-cure calcium hydroxide paste supplied in a 2.5 g package.",
+      price: "Contact for Price",
+      image: "/images/products/eas-endo/caleaseLc.jpeg",
+      images: ["/images/products/eas-endo/caleaseLc.jpeg"],
+      features: ["Light-cure calcium hydroxide paste", "2.5 g package", "EAS ENDO product"],
+    },
+    {
+      id: 99,
+      brand: "EAS ENDO",
+      name: "BioSeal Advance",
+      slug: "bioseal-advance",
+      shortDesc: "Bio ceramic root canal sealer supplied in a 2 g package.",
+      price: "Contact for Price",
+      image: "/images/products/eas-endo/biosealAdvance.jpeg",
+      images: ["/images/products/eas-endo/biosealAdvance.jpeg"],
+      features: ["Bio ceramic root canal sealer", "2 g package", "EAS ENDO product"],
+    },
+    {
+      id: 100,
+      brand: "EAS ENDO",
+      name: "Resto Fix",
+      slug: "resto-fix",
+      shortDesc: "Glass ionomer restorative cement supplied as a powder-and-liquid product.",
+      price: "Contact for Price",
+      image: "/images/products/eas-endo/restoFix.jpeg",
+      images: ["/images/products/eas-endo/restoFix.jpeg"],
+      features: [
+        "Glass ionomer restorative cement",
+        "Powder and liquid presentation",
+        "EAS ENDO product",
+      ],
+    },
+    {
+      id: 101,
+      brand: "EAS ENDO",
+      name: "Glass ONE-LC",
+      slug: "glass-one-lc",
+      shortDesc: "Light-curing glass ionomer cement supplied in a 2.5 g package.",
+      price: "Contact for Price",
+      image: "/images/products/eas-endo/glassOneLc.jpeg",
+      images: ["/images/products/eas-endo/glassOneLc.jpeg"],
+      features: ["Light-curing GIC", "2.5 g package", "EAS ENDO product"],
+    },
+    {
+      id: 102,
+      brand: "EAS ENDO",
+      name: "Shield S",
+      slug: "shield-s",
+      shortDesc: "Surface disinfectant supplied in a 500 ml package.",
+      price: "Contact for Price",
+      image: "/images/products/eas-endo/shieldS.jpeg",
+      images: ["/images/products/eas-endo/shieldS.jpeg"],
+      features: ["Surface disinfectant", "500 ml package", "EAS ENDO product"],
+    },
+
+    // EAS ENDO — additional products
+    // IDs 105–110 are reserved for these six products to avoid conflicts.
+
+    {
+      id: 105,
+      brand: "EAS ENDO",
+      name: "EASENDO Absorbent Paper Points",
+      slug: "easendo-absorbent-paper-points",
+      shortDesc:
+        "Absorbent paper points for endodontic procedures, available in multiple sizes and taper options.",
+      price: "Contact for Price",
+      image: "/images/products/eas-endo/absorbentPaperPoints.jpeg",
+      images: ["/images/products/eas-endo/absorbentPaperPoints.jpeg"],
+      features: [
+        "Sizes 15–40 shown",
+        ".02 taper options",
+        ".04 taper options",
+        ".06 taper options",
+      ],
+    },
+    {
+      id: 106,
+      brand: "EAS ENDO",
+      name: "EASENDO Prep ONE Liquid",
+      slug: "easendo-prep-one-liquid",
+      shortDesc: "Endodontic preparation liquid presented in a 100 ml bottle carton.",
+      price: "Contact for Price",
+      image: "/images/products/eas-endo/prepOneLiquid.jpeg",
+      images: ["/images/products/eas-endo/prepOneLiquid.jpeg"],
+      features: [
+        "100 ml presentation",
+        "17% disodium EDTA",
+        "0.7% cetrimide",
+        "Excipient included in formulation",
+      ],
+    },
+    {
+      id: 107,
+      brand: "EAS ENDO",
+      name: "EASENDO E-Solv",
+      slug: "easendo-e-solv",
+      shortDesc:
+        "D-limonene-based solution presented for softening and dissolving gutta-percha and zinc oxide eugenol cement.",
+      price: "Contact for Price",
+      image: "/images/products/eas-endo/eSolv.jpeg",
+      images: ["/images/products/eas-endo/eSolv.jpeg"],
+      features: [
+        "15 ml presentation",
+        "D-limonene-based solution",
+        "For softening and dissolving gutta-percha",
+        "Label mentions ZnO-E cement",
+      ],
+    },
+    {
+      id: 108,
+      brand: "EAS ENDO",
+      name: "EASENDO IodoFIX",
+      slug: "easendo-iodofix",
+      shortDesc: "Calcium hydroxide with iodoform paste, supplied in a 2 × 2 g presentation.",
+      price: "Contact for Price",
+      image: "/images/products/eas-endo/iodofix.jpeg",
+      images: ["/images/products/eas-endo/iodofix.jpeg"],
+      features: [
+        "Calcium hydroxide with iodoform paste",
+        "2 × 2 g presentation",
+        "Endodontic product",
+        "EAS ENDO packaging",
+      ],
+    },
+    {
+      id: 109,
+      brand: "EAS ENDO",
+      name: "EASENDO Ease Flow",
+      slug: "easendo-ease-flow",
+      shortDesc: "Light-cure flowable composite supplied in a 2 g presentation.",
+      price: "Contact for Price",
+      image: "/images/products/eas-endo/easeFlow.jpeg",
+      images: ["/images/products/eas-endo/easeFlow.jpeg"],
+      features: [
+        "Light-cure flowable composite",
+        "2 g presentation",
+        "Acrylated urethane glass fillers listed on packaging",
+        "Photoinitiators, BHT and thickeners listed on packaging",
+      ],
+    },
+    {
+      id: 110,
+      brand: "EAS ENDO",
+      name: "EASENDO Gutta Percha Points",
+      slug: "easendo-gutta-percha-points",
+      shortDesc:
+        "Gutta-percha points for endodontic obturation, shown in multiple sizes and taper options.",
+      price: "Contact for Price",
+      image: "/images/products/eas-endo/guttaPerchaPoints.jpeg",
+      images: ["/images/products/eas-endo/guttaPerchaPoints.jpeg"],
+      features: [
+        "Sizes 15–40 and additional sizes shown",
+        ".02 taper options",
+        ".04 taper options",
+        ".06 taper and F1, F2, F3 options shown",
+      ],
+    },
   ],
 
   burs: [
@@ -581,7 +747,6 @@ export const additionalProducts = {
       shortDesc: "MANI diamond burs shown in multiple shapes for dental rotary applications.",
       price: "Contact for Price",
       image: "/images/products/mani/mani-dia-burs.jpg",
-
       images: [
         "/images/products/mani/mani-dia-burs.jpg",
         "/images/products/mani/mani-dia-burs-1.jpg",
@@ -593,6 +758,45 @@ export const additionalProducts = {
         "Multiple bur shapes",
         "Contra-angle compatibility shown",
         "Multiple configurations",
+      ],
+    },
+  ],
+
+  equipment: [
+    {
+      id: 103,
+      brand: "XYRADENT",
+      name: "Xyradent Endomotor",
+      slug: "xyradent-endomotor",
+      shortDesc: "Endodontic motor with adjustable programs, rotation speed and torque settings.",
+      price: "Contact for Price",
+      image: "/images/products/xyradent/endomotor.jpeg",
+      images: ["/images/products/xyradent/endomotor.jpeg"],
+      features: [
+        "Five adjustable programs",
+        "Rotation speed range: 140–1000 rpm",
+        "Adjustable torque: 0.6–4.0 N·cm",
+        "Adjustable forward and reverse angles",
+      ],
+    },
+    {
+      id: 104,
+      brand: "XYRADENT",
+      name: "Xyradent Micromotors",
+      slug: "xyradent-micromotors",
+      shortDesc: "Micromotor options including portable brushless and wireless models.",
+      price: "Contact for Price",
+      image: "/images/products/xyradent/micromotors.jpeg",
+      images: [
+        "/images/products/xyradent/micromotors.jpeg",
+        "/images/products/xyradent/micromotor-1.jpeg",
+      ],
+      features: [
+        "Portable brushless micromotor option",
+        "Portable model: maximum speed 35,000 rpm",
+        "Portable model: maximum torque 3.0 N·cm",
+        "Wireless model: maximum speed 20,000 rpm",
+        "Wireless model: maximum torque 2.0 N·cm",
       ],
     },
   ],
