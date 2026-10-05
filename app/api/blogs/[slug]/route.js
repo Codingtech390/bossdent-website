@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import connectDB from "../../lib/mongodb";
 import Blog from "../../server/models/blog";
 
+
 export async function GET(req, { params }) {
   try {
     await connectDB();
@@ -11,10 +12,7 @@ export async function GET(req, { params }) {
     const blog = await Blog.findOne({ slug: slug, status: "published" });
 
     if (!blog) {
-      return NextResponse.json(
-        { success: false, error: "Blog nahi mila" },
-        { status: 404 }
-      );
+      return NextResponse.json({ success: false, error: "Blog nahi mila" }, { status: 404 });
     }
 
     return NextResponse.json({ success: true, data: blog });
@@ -34,10 +32,7 @@ export async function PUT(req, { params }) {
     const blog = await Blog.findByIdAndUpdate(id, body, { new: true, runValidators: true });
 
     if (!blog) {
-      return NextResponse.json(
-        { success: false, error: "Blog nahi mila" },
-        { status: 404 }
-      );
+      return NextResponse.json({ success: false, error: "Blog nahi mila" }, { status: 404 });
     }
 
     return NextResponse.json({ success: true, data: blog });
@@ -56,10 +51,7 @@ export async function DELETE(req, { params }) {
     const blog = await Blog.findByIdAndDelete(id);
 
     if (!blog) {
-      return NextResponse.json(
-        { success: false, error: "Blog nahi mila" },
-        { status: 404 }
-      );
+      return NextResponse.json({ success: false, error: "Blog nahi mila" }, { status: 404 });
     }
 
     return NextResponse.json({ success: true, message: "Blog delete ho gaya" });

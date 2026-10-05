@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
-import connectDB from "../lib/mongodb";   // 
+import connectDB from "../lib/mongodb";
 import Blog from "../server/models/blog";
-
 // ── GET: Sabhi published blogs fetch karo ──
 export async function GET() {
   try {
@@ -9,7 +8,7 @@ export async function GET() {
 
     const blogs = await Blog.find({ status: "published" })
       .sort({ createdAt: -1 })
-      .select("title slug excerpt author coverImage createdAt"); 
+      .select("title slug excerpt author coverImage createdAt");
 
     return NextResponse.json({ success: true, data: blogs });
   } catch (error) {
@@ -30,7 +29,7 @@ export async function POST(req) {
     if (!title || !slug || !excerpt || !content || !author) {
       return NextResponse.json(
         { success: false, error: "Sabhi required fields bharo" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -42,7 +41,7 @@ export async function POST(req) {
     if (error.code === 11000) {
       return NextResponse.json(
         { success: false, error: "Yeh slug pehle se exist karta hai" },
-        { status: 400 }
+        { status: 400 },
       );
     }
     console.error(error);
